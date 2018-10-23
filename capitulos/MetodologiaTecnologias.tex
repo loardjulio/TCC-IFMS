@@ -1,0 +1,91 @@
+\chapter{Metodologias e tecnologias}
+As ferramentas adotadas para o desenvolvimento do \textit{software} estão descritos nos itens subsequentes. 
+
+\section{Metodologia}
+
+Para o desenvolvimento do sistema será utilizado algumas das melhores práticas para desenvolvimento de sistemas, bem como ferramentas que irão auxiliar na modelagem, desenvolvimento e na implantação. O sistema será desenvolvido na linguagem JAVA.
+ \subsection{Engenharia de software}
+
+Algumas das etapas do desenvolvimento estão descritas a seguir:
+
+1 – Levantamento e análise de requisitos e elaboração da modelagem do sistema utilizando UML.
+
+2 – Codificação do sistema.
+
+3 – Realizações de testes para identificar e prevenir erros futuros.
+
+4 – Implantação do sistema.
+
+
+\section{Ferramentas e tecnologias}
+Para o desenvolvimento serão utilizadas as seguintes tecnologias: Netbeans IDE, Astah Community, MySQL Workbench.
+
+
+
+
+\subsection{Netbeans IDE}
+
+
+O NetBeans IDE \cite{netbeans2018} permite o desenvolvimento de aplicações rápida e inteligente utilizando as linguagens JAVA, HTML, PHP, entre outros. Além do editor de texto permite compilar, debugar e instalar aplicações. O NetBeans IDE possui uma vasta e bem organizada documentação.
+
+
+\subsection{Astah Community}
+
+Astah Community \cite{astah} é um ferramenta de modelagem UML desenvolvida pela empresa japonesa \textit{Change Vision}. Com esta ferramenta é possível modelar o sistema e obter: diagrama de caso de uso, diagrama de classe, diagrama de sequencia, diagrama de atividade, entre outros. É uma ferramenta com interface amigável, entretanto  não basta apenas conhecer UML para utilizá-la, é preciso também conhecer suas funcionalidades para obter os melhores resultados. 
+
+Pontos fortes: Gratuito, Facilidade de organização, Interface amigável.
+
+Pontos fracos: Idioma inglês, Recursos bloqueados.
+
+
+\subsection{MySQL Workbench}
+MySQL Workbench \cite{mysql2018workbench} é uma ferramenta de modelagem de banco de dados. Auxilia na modelagem de dados e criação de script SQL. Esta disponível para diversas plataformas como o \textit{Microsoft Windows} e Distribuições \textit{linux}.
+
+Esta ferramenta permite que o desenvolvedor modele, gere e gerencie visualmente o banco de dados, além de possibilitar a criação de modelos ER (entidade-relacionamento).
+
+\section{Linguagem e Frameworks}
+   Nesta sessão serão apresentados a linguagem de programação e os \textit{frameworks}  que irão auxiliar no processo de desenvolvimento do sistema. A utilização destes mecanismos é essencial para se obter agilidade no desenvolvimento, além de garantir o sucesso de operações cruciais para o sistema.
+    
+    \subsection{Linguagem de programação - Java}
+
+Java é uma das linguagens de programação mais utilizadas no mundo. Desenvolvida pela empresa \textit{Sun Microsystems} na década de 90, atualmente pertence a empresa \textit{Oracle}.
+É compilada para \textit{bytecode} e interpretada pela sua JVM (\textit{Java Virtual Machine}). É uma linguagem que utiliza como paradigma a orientação a objetos sendo um dos principais paradigmas da atualidade. Além disso, o JAVA possui uma comunidade forte e participativa.  Portanto, para o desenvolvimento deste projeto, foi utilizada esta poderosa ferramenta.
+
+
+    \subsection{Hibernate}
+    Neste projeto, utilizaremos o framework Hibernate para realizar o mapeamento objeto/relacional em java. Utilizando-se de anotações presentes nas classes, ele é capaz de mapear, em tempo de execução, os objetos do sistema e realizar operações no banco de dados.
+    O Hibernate facilita o desenvolvimento de aplicações que acessam
+bancos de dados, fazendo com que o programador se preocupe mais com o seu modelo de objeto e seus
+comportamentos, do que com as tabelas do banco de dados \cite{linhares2012introduccao}.
+
+    \subsection{JasperReports e IReport}
+    
+    É comum em sistemas comerciais a necessidade de entregar para os usuários algum tipo de relatório. Neste sistema, para facilitar esta tarefa, utilizou-se  o \textit{framework} JasperReports aliado com a IDE de \textit{designer} IReport. 
+    O JasperReport é uma ferramenta de código aberto que permite a geração de relatório em vários formatos como PDF, HTML, XLS, CSV e XML \cite{lovisi2011estrategias}.
+     O IReport é uma ferramenta que permite definir o \textit{Layout} dos relatórios utilizando uma interface gráfica. Obtendo ao final, um arquivo com extensão \textit{.Jasper} que permite utilizar os recursos do framework JasperReport na aplicação.
+        Segundo Lovisi \cite{lovisi2011estrategias}, o iReport permite desenvolver relatórios elaborados sem utilizar diretamente o código XML, o qual é todo gerado automaticamente. O ambiente ainda oferece atalhos para tarefas de compilação e visualização do relatório, facilitando assim sua elaboração.
+    
+
+\section{Cronograma}
+ 
+Para uma melhor organização durante o período de desenvolvimento, foi elaborado um cronograma das atividades, descrito na Tabela \ref{meucronograma}, que deverão ser executadas entre Março de 2018 à Novembro de 2018, conforme pode ser visto na tabela a seguir:
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[htb]
+\centering
+\caption{Cronograma de atividades.}
+\label{meucronograma}
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+Atividade                  & \multicolumn{1}{l}{Mar} & \multicolumn{1}{l}{Abr} & \multicolumn{1}{l}{Mai} & \multicolumn{1}{l}{Jun} & \multicolumn{1}{l}{Jul} & \multicolumn{1}{l}{Ago} & \multicolumn{1}{l}{Set} & \multicolumn{1}{l}{Out} & \multicolumn{1}{l}{Nov} \\ \midrule
+Levantamento de Requisitos & x                       & x                       &                         &                         &                         &                         &                         &                         &                         \\
+Diagramas                  &                         &                         & x                       & x                       & x                       &                         &                         &                         &                         \\
+Codificação                &                         &                         &                         &                         & x                       & x                       & x                       & x                       &                         \\
+Testes                     &                         &                         &                         &                         &                         &                         & x                       & x                       &                         \\
+Implantação                &                         &                         &                         &                         &                         &                         &                         &                         & x                       \\ \midrule
+Digitação do TCC           &                         &                         &                         &                         &                         &                         &                         &                         & x                       \\ \bottomrule
+\end{tabular}
+\end{table}
