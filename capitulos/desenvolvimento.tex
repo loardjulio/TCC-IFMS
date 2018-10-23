@@ -20,7 +20,7 @@ Um requisito funcional define uma função que um sistema deve executar. Logo, r
 
 \subsection{Requisitos não funcionais}
 
-Os requisitos não funcionais estão diretamente relacionados com as propriedades que o sistema todo ou de partes do sistema devem apresentar e estão contidos no Anexo B deste documento na Tabela \ref{tab:rnf01} a \ref{tab:rnf05}
+Os requisitos não funcionais estão diretamente relacionados com as propriedades que o sistema todo ou de partes do sistema devem apresentar e estão contidos no Anexo B deste documento na Tabela \ref{tab:rnf01} a \ref{tab:rnf04}
 
 
 \section{Diagramas UML}
@@ -34,7 +34,7 @@ O diagrama de caso de uso apresenta de forma visual os principais requisitos do 
 \centering
 \caption{Diagrama de casos de uso}
 \label{fig:Casodeuso}
-\includegraphics[width=13cm]{imagens/Caso-de-uso-}
+\includegraphics[width=13cm]{imagens/diagramas/Caso-de-uso-}
 \fonte{Autor próprio.}
 \end{figure}
 
@@ -110,12 +110,12 @@ Já o código para geração do banco de dados pode ser encontrado no anexo F de
    
     O Hibernate fornece como opções de mapeamento, modelos de objeto desenvolvidos com arquivos XML ou através de anotações no código fonte das classes de modelo. Neste projeto foi utilizado o método de anotações. A Tabela \ref{tab:anotacoes} mostra as principais anotações utilizadas.
 
-\begin{table}[htp]
+\begin{table}[H]
 \caption{Lista de anotações}
 \label{tab:anotacoes}
-\begin{tabular}{|l|l|}
+\begin{tabular}{ll}
 \hline
-\multicolumn{2}{|c|}{Anotações utilizadas}                                        \\ \hline
+\multicolumn{2}{c}{Anotações utilizadas}                                        \\ \hline
 @Entity         & Indica para que classe é uma entidade no banco de dados         \\ \hline
 @Id             & Define o atributo como um Id                                    \\ \hline
 @GeneratedValue & Define uma estratégia de geração de valor para o atributo       \\ \hline
@@ -149,7 +149,7 @@ Já o código para geração do banco de dados pode ser encontrado no anexo F de
  \begin{figure}[H]
 \centering
 \caption{Código - Classe DAO}
-\includegraphics[width=15cm]{imagens/codigo/TrechoDao}
+\includegraphics[width=13cm]{imagens/codigo/TrechoDao}
 \fonte{Autor próprio}
 \label{fig:Classe DAO}
 \end{figure}
@@ -178,63 +178,74 @@ Já o código para geração do banco de dados pode ser encontrado no anexo F de
 \end{figure}
     
      \subsection{Validação dos dados}
-     É comum o usuário enviar dados inesperados como entrada para o sistema, por isso, devemos garantir que os dados informados sejam compatíveis com os esperados. Através deste princípio foram desenvolvidos métodos de verificação dos dados na camada de visualização do sistema.
+     É comum o usuário enviar dados inesperados como entradas para o sistema, por isso, devemos garantir que os dados informados sejam compatíveis com os esperados. Através deste princípio foram desenvolvidos métodos de verificação dos dados na camada de visualização do sistema.
      
     
     
 \section{Telas do sistema}
-    \subsection{Loguin}
-      
+A seguir são mostradas algumas telas de utilização do sistema SOFTFLOR. Como a tela de entrada do funcionário, tela principal do sistema, lista de fornecedores, cadastro de produtos e clientes, elaboração e geração de orçamentos.
+\subsection{Login}
+A Figura \ref{fig:Tela-de-Login} mostra a tela de entrada do funcionário. Para entrar no sistema, o funcionário precisa se identificar, informando seu nome de usuário e sua senha. Após informar estes dados, o sistema irá fazer a verificação e autorização de entrada do funcionário.
 \begin{figure}[H]
 \centering
 \caption{Tela de login}
 \includegraphics[width=11cm]{imagens/telas/Login}
 \fonte{Autor próprio}
-\label{fig:Tela de Login}
+\label{fig:Tela-de-Login}
 \end{figure}
       
       
 \subsection{Principal}
+A tela principal do sistema pode ser vista na Figura \ref{fig:Tela-principal}. O funcionário tem a facilidade de acessar algumas funcionalidades através do menu rápido, como a lista de clientes, fornecedores, produtos e geração de orçamentos. Outras funcionalidades podem ser acessadas através do menu superior da tela principal.
+
 \begin{figure}[H]
 \centering
 \caption{Tela principal}
 \includegraphics[width=12cm]{imagens/telas/Principal}
 \fonte{Autor próprio}
-\label{fig:Tela principal}
+\label{fig:Tela-principal}
 \end{figure}
-       
        
 \subsection{Lista de fornecedores}
-    
-    \begin{figure}[H]
+A Figura \ref{fig:Lista-de-fornecedores} mostra a tela de listagem de fornecedores, é possível editar informações, cadastrar um novo fornecedor, ver produtos associados ou excluir um fornecedor.
+\begin{figure}[H]
 \centering
 \caption{Lista de fornecedores}
-\includegraphics[width=15cm]{imagens/telas/ListaFornecedor}
+\includegraphics[width=14cm]{imagens/telas/ListaFornecedor}
 \fonte{Autor próprio}
-\label{fig:Lista de fornecedores}
+\label{fig:Lista-de-fornecedores}
 \end{figure}
        
-    \subsection{Cadastro de produtos}
-       \begin{figure}[htp]
+\subsection{Lista de produtos}
+%A Figura \ref{fig:Lista-de-produtos} mostra a tela de produtos cadastrados no banco de dados. As informações mostradas contém o código, nome, quantidade atual no estoque, preço de compra, preço de venda, quantidade mínimo que produto pode ter no estoque e a unidade de medida referente ao produto. Além disso, o funcionário pode cadastrar um novo produto ou editar as informações de um produto já cadastrado no sistema.
+
+A Figura \ref{fig:Lista-de-produtos} mostra a tela de produtos cadastrados. Contém as informações referente aos produtos. O funcionário pode cadastrar, editar ou excluir produtos.
+\begin{figure}[H]
 \centering
 \caption{Lista de produtos}
-\includegraphics[width=15cm]{imagens/telas/ListaProdutos}
+\includegraphics[width=14cm]{imagens/telas/ListaProdutos}
 \fonte{Autor próprio}
-\label{fig:Lista de produtos}
+\label{fig:Lista-de-produtos}
 \end{figure}
         
         
-    \subsection{Cadastro de clientes}
+\subsection{Lista de clientes}
+
+A Figura \ref{fig:Lista de clientes} exibe a tela de clientes cadastrados no sistema. 
         
  \begin{figure}[H]
 \centering
 \caption{Lista de clientes}
-\includegraphics[width=15cm]{imagens/telas/ListaCliente}
+\includegraphics[width=14cm]{imagens/telas/ListaCliente}
 \fonte{Autor próprio}
 \label{fig:Lista de clientes}
 \end{figure}
         
+Nesta tela, exibirá informações pessoais de cada cliente, além de dados de contato e endereço. O Funcionário poderá, ainda, editar ou excluir um cliente, além de cadastrar um novo cliente no banco de dados do sistema.    
+        
 \subsection{Elaboração de orçamentos}
+A Figura \ref{fig:Geração de orçamento} exibe a tela onde são gerados os orçamentos. Primeiramente o funcionário  busca pelo cliente cadastrado no sistema. Em seguida, são inseridos os produtos desejados no orçamento, que gera automaticamente o custo total dos produtos. A qualquer momento o funcionário poderá excluir um produto da lista. Por fim o funcionário poderá salvar ou gerar um orçamento elaborado.
+
 \begin{figure}[H]
 \centering
 \caption{Geração de Orçamentos}
@@ -244,15 +255,16 @@ Já o código para geração do banco de dados pode ser encontrado no anexo F de
 \end{figure}      
 
 \subsection{Orçamento gerado}
-
+A figura á seguir \ref{fig:Orçamento Gerado} apresenta um orçamento gerado através da tela \ref{fig:Geração de orçamento}. Nesta tela o funcionário poderá salvar e imprimir o orçamento. Também são apresentados informações quanto ao valor total do orçamento e a data de geração.
 \begin{figure}[H]
 \centering
 \caption{Orçamento gerado}
-\includegraphics[width=17cm]{imagens/telas/OrcamentoGerado}
+\includegraphics[width=15cm]{imagens/telas/OrcamentoGerado}
 \fonte{Autor próprio}
 \label{fig:Orçamento Gerado}
+  
 \end{figure}  
-        
+      
 \section{Testes de software}  
 
 A fase de teste é muito importante no desenvolvimento de software pois é esta fase que busca constatar se sistema atende ou não os requisitos levantados na ciclo inicial de desenvolvimento.
@@ -277,9 +289,9 @@ Haverá sucesso no teste se o resultado obtido for igual ao resultado esperado \
 \begin{table}[H]
 \caption{Resultado de teste - Cadastrar produto}
 \label{tab:testeCadProduto}
-\resizebox{\textwidth}{!}{\begin{tabular}{|l|l|l|}
+\resizebox{\textwidth}{!}{\begin{tabular}{lll}
 \hline
-\multicolumn{3}{|c|}{\textbf{Testes - Manter Produto}}                                                                 \\ \hline
+\multicolumn{3}{c}{\textbf{Testes - Manter Produto}}                                                                 \\ \hline
 \textbf{Teste}                              & \textbf{Resultado}                                                    & \textbf{Situação}  \\ \hline
 Cadastro de produto sem fornecedor & Erro: Produto cadastrado                                     & Corrigido \\ \hline
 Cadastro com campo vazio           & \begin{tabular}[l]{@{}l@{}}Produto não é cadastrado.\\Não emite mensagem de erro.\end{tabular}          & Pendente  \\ \hline
@@ -300,9 +312,9 @@ Atualmente existente diversos sistemas operacionais que funcionam nos mais varia
 \centering
 \caption{Teste compatibilidade}
 \label{tab:testeCompatibilidade}
-\resizebox{\textwidth}{!}{\begin{tabular}{|c|c|c|c|c|}
+\resizebox{\textwidth}{!}{\begin{tabular}{ccccc}
 \hline
-\multicolumn{5}{|c|}{\textbf{Teste - Compatibilidade}}                                   \\ \hline
+\multicolumn{5}{c}{\textbf{Teste - Compatibilidade}}                                   \\ \hline
 \textbf{Sistema operacional} & \textbf{Memória RAM} & \textbf{Processador}   & \textbf{Disco Rígido} & \textbf{Status}       \\ \hline
 Windows 8.1         & 8 GB        & Intel Core i5 & 500 GB       & Satisfatório \\ \hline
 Windows 7           & -           & -             & -            & Pendente     \\ \hline
@@ -321,15 +333,15 @@ Os testes de segurança são realizados afim de evitar acesso indesejado ao sist
 \centering
 \caption{Resultado de teste - Segurança}
 \label{tab:testeSegurança}
-\resizebox{\textwidth}{!}{\begin{tabular}{|c|c|c|}
+\resizebox{\textwidth}{!}{\begin{tabular}{ccc}
 \hline
-\multicolumn{3}{|c|}{\textbf{Teste - Segurança}}                                                                                                                              \\ \hline
-\textbf{Teste}                         & \textbf{Resultado}                                                                                                             & \textbf{Situação}     \\ \hline
-Página de login               & \begin{tabular}[c]{@{}c@{}}Acesso é restrito a usuários cadastrados.\\ Exibe mensagens aos usuários\end{tabular}      & Satisfatório \\ \hline
-Exclusão de itens             & Solicita confirmação de exclusão                                                                                      & Satisfatório \\ \hline
+\multicolumn{3}{c}{\textbf{Teste - Segurança}} \\ \hline
+\textbf{Teste} & \textbf{Resultado} & \textbf{Situação}     \\ \hline
+Página de login & \begin{tabular}[c]{@{}c@{}}Acesso é restrito a usuários cadastrados.\\ Exibe mensagens aos usuários\end{tabular}      & Satisfatório \\ \hline
+Exclusão de itens & Solicita confirmação de exclusão & Satisfatório \\ \hline
 Salvamento de arquivos falhos & \begin{tabular}[c]{@{}c@{}}Rollback é realizado quando ocorre uma\\ falha na persistência de objetos\end{tabular} & Satisfatório \\ \hline
-Acesso a lista de usuários    & Não é possível obter lista de usuários                                                                                & Pendente     \\ \hline
-Criptografia de senhas        & Não existe método de criptografia                                                                                     & Pendente     \\ \hline
+Acesso a lista de usuários & Não é possível obter lista de usuários & Pendente     \\ \hline
+Criptografia de senhas & Não existe método de criptografia & Pendente     \\ \hline
 \end{tabular}}
 \fonte{Autor próprio.}
 \end{table}
@@ -343,14 +355,14 @@ Consiste em realizar testes utilizando o sistema em sua versão de \textit{relea
 \caption{Resultado de teste - Sistema}
 \label{tab:testeSistema}
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{ccc}
 \hline
-\multicolumn{3}{|c|}{\textbf{Testes do sistema}}                                                                                                                                                                     \\ \hline
-\textbf{Teste} & \textbf{Resultado} & \textbf{Situação}     \\ \hline
-Acesso ao sistema                                                                          & Primeiro acesso é lento                                                                         & Razoável     \\ \hline
-Teste das ações dos botões                                                                 & \begin{tabular}[c]{@{}c@{}}Todas as ações ocorreram\\ dentro do esperado\end{tabular}           & Satisfatório \\ \hline
-Elaboração do orçamento                                                                    & Elaborado com sucesso                                                                           & Satisfatório \\ \hline
-Geração do orçamento                                                                       & Tela de visualização com lentidão                                                               & Razoável     \\ \hline
+\multicolumn{3}{c}{\textbf{Testes do sistema}} \\ \hline
+\textbf{Teste} & \textbf{Resultado} & \textbf{Situação}     \\ \hline 
+Acesso ao sistema & Primeiro acesso é lento & Razoável     \\ \hline
+Teste das ações dos botões & \begin{tabular}[c]{@{}c@{}}Todas as ações ocorreram\\ dentro do esperado\end{tabular}           & Satisfatório \\ \hline
+Elaboração do orçamento & Elaborado com sucesso & Satisfatório \\ \hline
+Geração do orçamento & Tela de visualização com lentidão & Razoável     \\ \hline
 \begin{tabular}[c]{@{}c@{}}Cadastro de produto a\\ partir da tela de listagem\end{tabular} & \begin{tabular}[c]{@{}c@{}}Não retorna a tela de listagem\\ ao realizar a operação\end{tabular} & Satisfatório \\ \hline
 \end{tabular}
 \fonte{Autor próprio.}
@@ -358,4 +370,4 @@ Geração do orçamento                                                         
 
 \section{Implantação do sistema}
 
-Falar onde o sistema sera implantado.
+O sistema atenderá as demandas do Garden Center do espaço Café com Flores. Neste espaço, além do garden, funciona o escritório Torre Forte Engenharia Elétrica e Agronômica onde são desenvolvidos os projetos de paisagismo que utilizam os produtos que serão armazenados neste sistema. A instalação do \textit{software} será em computador \textit{Desktop} equipado com 4GB de memória RAM, processador Intel Core i3 e sistema de operacional \textit{Windows} 7 64 bits.
